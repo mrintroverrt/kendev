@@ -1,1 +1,1 @@
-/home/pi/kendev/src/helloworldmodule.o
+/home/pi/kendev/src/hellowordmodule/helloworldmodule.o
