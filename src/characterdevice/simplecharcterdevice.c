@@ -8,7 +8,7 @@ MODULE_DESCRIPTION("An Simple Charatcter dev");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("0.1");
 
-dev_t dev = MKDEV(254,0);
+dev_t dev = MKDEV(261,0);
 
 
 
