@@ -19,6 +19,6 @@ clean:
 
 test:
 	@dmesg -C
-	@insmod ../../$(BUILD_DIR)/readandwritemodule.c.ko
+	@insmod ../../$(BUILD_DIR)/readandwritemodule.ko
 	@rmmod readandwritemodule
 	@dmesg
