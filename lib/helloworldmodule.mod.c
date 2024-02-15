@@ -6,11 +6,6 @@
 #include <linux/vermagic.h>
 #include <linux/compiler.h>
 
-#ifdef CONFIG_UNWINDER_ORC
-#include <asm/orc_header.h>
-ORC_HEADER;
-#endif
-
 BUILD_SALT;
 BUILD_LTO_INFO;
 
@@ -32,16 +27,13 @@ MODULE_INFO(retpoline, "Y");
 #endif
 
 
-
-static const char ____versions[]
-__used __section("__versions") =
-	"\x18\x00\x00\x00\xe0\x28\xad\xb1"
-	"__gnu_mcount_nc\0"
-	"\x10\x00\x00\x00\xd8\x7e\x99\x92"
-	"_printk\0"
-	"\x18\x00\x00\x00\x9d\x89\x0d\x64"
-	"module_layout\0\0\0"
-	"\x00\x00\x00\x00\x00\x00\x00\x00";
+static const struct modversion_info ____versions[]
+__used __section("__versions") = {
+	{ 0xb1ad28e0, "__gnu_mcount_nc" },
+	{ 0x92997ed8, "_printk" },
+	{ 0xefd6cf06, "__aeabi_unwind_cpp_pr0" },
+	{ 0xc84d16dc, "module_layout" },
+};
 
 MODULE_INFO(depends, "");
 
